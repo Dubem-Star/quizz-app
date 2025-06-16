@@ -149,11 +149,16 @@ body {
     flex: 0 0 calc(45% - 10px);
     font-size: 13px;
   }
+
+  #timer {
+    justify-content: center;
+    margin-left: 90px;
+  }
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 800px) {
   .questionBlock {
-    flex: 0 0 100%;
+    flex: 0 0 calc(75% - 10px);
     font-size: 15px;
   }
-} */
+}
