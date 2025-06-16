@@ -447,6 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", () => {
       currentPage--;
       nextBtn.textContent = "Next";
+      window.scrollTo(0, 0);
       renderQuestions();
     });
   }
@@ -458,6 +459,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const start = currentPage * questionsPerPage;
       const end = start + questionsPerPage;
       const currentSet = questions.slice(start, end);
+
+      window.scrollTo(0, 0);
 
       currentSet.forEach((q, index) => {
         const questionName = `question${start + index + 1}`;
@@ -496,12 +499,14 @@ function renderQuestions() {
     qDiv.classList.add("questionBlock");
 
     const qTitle = document.createElement("h3");
+    qTitle.classList.add("question");
     qTitle.textContent = `${start + index + 1}. ${q.question}`;
     qDiv.appendChild(qTitle);
 
     q.options.forEach((option) => {
       const label = document.createElement("label");
       const radio = document.createElement("input");
+
       radio.type = "radio";
       radio.name = `question${start + index + 1}`; //Numbering for display*
       radio.value = option;
