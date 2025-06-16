@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", () => {
       currentPage--;
       nextBtn.textContent = "Next";
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
       renderQuestions();
     });
   }
@@ -460,7 +460,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const end = start + questionsPerPage;
       const currentSet = questions.slice(start, end);
 
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
 
       currentSet.forEach((q, index) => {
         const questionName = `question${start + index + 1}`;
