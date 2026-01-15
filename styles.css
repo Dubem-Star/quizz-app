@@ -1,4 +1,4 @@
-body {
+/* body {
   text-align: center;
   background-color: #8dbcc7;
   margin: 0;
@@ -6,6 +6,74 @@ body {
   font-size: 15px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
+} */
+
+.placeholder-background {
+  background-image: url(media/quizz_like_background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* *******************INDEX PAGE STYLING************************ */
+/* *******************INDEX PAGE STYLING************************ */
+
+.index-page {
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.index-page .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 100vh;
+  margin: 0 !important;
+}
+
+.index-page .container h1 {
+  color: #ebffd8;
+  font-size: 45px;
+}
+
+.index-page .container .btn-container {
+  width: 145px;
+  height: 50px;
+  position: relative;
+  margin: 10px 5px;
+}
+.index-page .container .btn-container .start-btn {
+  position: absolute;
+  padding: 15px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: #05bd0b;
+  color: white;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.index-page .container .btn-container .start-btn:hover {
+  background-color: #0fc515;
+  width: 150px;
+  height: 55px;
+}
+
+/* *******************QUIZZ PAGE STYLING************************ */
+/* *******************QUIZZ PAGE STYLING************************ */
+
+.quizz-page {
 }
 
 .container {
@@ -17,15 +85,16 @@ body {
 }
 
 .questionBlock {
-  flex: 0 0 calc(15% - 10px);
+  flex: 0 0 calc(21% - 10px);
   width: 250px;
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   border: 1px solid black;
   margin: 6px;
-  background-color: #ebffd8;
+  background-color: #f5f9fd;
   transition: transform 0.2s ease;
+  font-family: "Montserrat", sans-serif;
 }
 
 .questionBlock:hover {
@@ -33,7 +102,15 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-#startBtn,
+.questionBlock .question {
+  font-size: 16px;
+}
+
+.questionBlock label {
+  font-size: 15px;
+}
+
+/* #startBtn, */
 #nextBtn,
 #prevBtn,
 #backBtn {
@@ -46,9 +123,9 @@ body {
   color: white;
   transition: background-color 0.3s ease;
   margin: 10px 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
-#startBtn:hover,
 #nextBtn:hover,
 #prevBtn:hover,
 #backBtn:hover {
@@ -73,10 +150,20 @@ body {
   margin-bottom: 20px;
 }
 
-#timer {
+.timer {
   display: flex;
   justify-content: flex-end;
   margin-right: 69px;
+}
+
+.timer p {
+  background-color: #f5f9fd;
+  padding: 3px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: 1px solid black;
+  font-weight: 15px;
+  padding: 8px;
 }
 
 .qDiv {
@@ -123,22 +210,14 @@ body {
   background-color: #0066cc;
 }
 
-#time {
-  border: 1px solid black;
-  background-color: #ebffd8;
-  padding: 3px;
-  border-radius: 3px;
-  font-weight: 500;
-}
-
-.indexPage {
+/* .indexPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0;
   height: 100vh;
-}
+} */
 
 .make-bold {
   font-weight: bold;
